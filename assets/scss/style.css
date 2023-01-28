@@ -1,0 +1,163 @@
+/*===========================
+  COMMON css 
+===========================*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Syne:wght@400;500;600;700;800&display=swap");
+body {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f0ed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+a,
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--text-color);
+  margin: 0px;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.btn-success {
+  background: #39CA93;
+  border: none;
+  border-radius: 3px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+.navbar-logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-logo {
+  max-width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
