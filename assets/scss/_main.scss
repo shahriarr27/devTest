@@ -193,4 +193,92 @@ main{
       }
     }
   }
+  #services{
+    margin: 60px 0px;
+    .card-deck{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 0px;
+      .card{
+        padding: 80px 80px;
+        position: relative;
+        &:first-of-type{
+          background: $color_2;
+        }
+        &:nth-of-type(2){
+          background: $color_3;
+        }
+        &:nth-of-type(3){
+          background: $color_4;
+        }
+        .card-header{
+          display: flex;
+          flex-direction: column;
+          min-height: 250px;
+          justify-content: flex-end;
+          margin-bottom: 30px;
+          .icon{
+            width: 100px;
+            height: 100px;
+          }
+          h2{
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 130.2%;
+            color: #000000;
+            padding-bottom: 15px;
+            position: relative;
+            &::after{
+              position: absolute;
+              content: '';
+              width: 100px;
+              width: 130px;
+              height: 0px;
+              left: 0px;
+              bottom: 0;
+              border: 3px solid rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+        .card-body{
+          padding-bottom: 50px;
+          ul{
+            list-style: disc;
+            margin-left: 20px;
+            li{
+              font-family: 'Syne';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 25px;
+              line-height: 40px;
+              letter-spacing: -0.5px;
+              color: #000000;
+            }
+          }
+        }
+        .card-footer{
+          position: absolute;
+          width: 100%;
+          right: 30px;
+          bottom: 30px;
+          a{
+            float: right;
+            padding: 15px 40px;
+            border: 3px solid #FFFFFF;
+            border-radius: 25.5px;
+            font-family: 'Basic Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
 }
