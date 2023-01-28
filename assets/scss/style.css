@@ -2,20 +2,20 @@
   COMMON css 
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Syne:wght@400;500;600;700;800&display=swap");
-body {
-  font-weight: normal;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-  font-family: 'DM Sans', sans-serif;
-  background: #f4f0ed;
-}
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0px;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f0ed;
 }
 
 img {
@@ -116,7 +116,7 @@ p {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -126,38 +126,253 @@ p {
   border-radius: 3px;
 }
 
-nav {
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0px;
+  z-index: 999;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-ul {
-  list-style: none;
+header nav ul .nav-item {
+  margin: 0px 20px;
+}
+
+header nav ul .nav-item .nav-link {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+main #hero {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: url(../images/hero-bg.png) no-repeat center top;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+main #hero::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(42.36deg, rgba(22, 30, 47, 0.5) 30.86%, rgba(22, 30, 47, 0.04) 80.06%);
+}
+
+main #hero .hero-slider-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+}
+
+main #hero .hero-slider-wrapper .slider-item {
+  display: none;
+  position: relative;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-animation: slide-left 2s;
+          animation: slide-left 2s;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main #hero .hero-slider-wrapper .slider-item.show {
+  display: block;
+}
+
+main #hero .hero-slider-wrapper .slider-item h5 {
+  color: white;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.1111px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+main #hero .hero-slider-wrapper .slider-item h2 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 45px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  width: 40%;
+  margin-bottom: 32px;
+}
+
+main #hero .hero-slider-wrapper .slider-item p {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  width: 40%;
+  margin-bottom: 36px;
+}
+
+main #hero .hero-slider-wrapper .slider-item a {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+}
+
+main #hero .hero-slider-wrapper .slider-item a i {
+  width: 24px;
+  height: 24px;
+  background: #DAAA00;
+  line-height: 24px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+main #hero .hero-slider-wrapper .slider-item a:hover i {
+  margin-right: 10px;
+}
+
+main #hero #sliderControl {
+  position: relative;
+  z-index: 5;
+  margin-top: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-li {
-  margin-right: 20px;
-}
-
-.navbar-logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
 }
 
-.navbar-logo {
-  max-width: 100%;
+main #hero #sliderControl .slider-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+main #hero #sliderControl .slider-nav h5 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+  color: #D9D9D9;
+}
+
+main #hero #sliderControl .slider-nav.active {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+main #hero #sliderControl .slider-nav.active h5 {
+  color: white;
+}
+
+main #hero .sliderBtns {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  background: #eee;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 15px;
+}
+
+main #hero .sliderBtns button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main #hero .sliderBtns button i {
+  font-size: 20px;
+  color: #616161;
 }
 /*# sourceMappingURL=style.css.map */
