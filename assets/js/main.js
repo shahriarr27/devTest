@@ -42,32 +42,42 @@ sliderNav.forEach(function (singleNav, key) {
 })
 
 // end hero slider
+
+//transaction slider
 var currentSlide = 0;
 var slider = document.getElementById("slider");
 var prevBtn = document.getElementById("btn__prev");
 var nextBtn = document.getElementById("btn__next");
+let scrollbar = document.getElementById("scrollbar");
+let slidesLength = slider.children.length;
 
-
-
-function prevSlide() {
+function prevCardSlide() {
   if (currentSlide > 0) {
-    showSlide(currentSlide - 1);
+    showCardSlide(currentSlide - 1);
   }
 }
 
-function showSlide(index) {
+function showCardSlide(index) {
     currentSlide = index;
-    slider.style.transform = "translateX(-" + (currentSlide * 33.33) + "%)";
+    slider.style.transform = "translateX(-" + (currentSlide * 31) + "%)";
+    updateScrollbar();
 }
 
-function nextSlide() {
+function nextCardSlide() {
     if (currentSlide < slider.children.length - 3) {
-        showSlide(currentSlide + 1);
+      showCardSlide(currentSlide + 1);
     } else {
         currentSlide = 0;
-        showSlide(currentSlide);
+        showCardSlide(currentSlide);
     }
+    console.log(currentSlide);
 }
 
-prevBtn.addEventListener("click", prevSlide);
-nextBtn.addEventListener("click", nextSlide);
+function updateScrollbar() {
+  scrollbar.style.width = (currentSlide + 1) / slidesLength * 100 + "%";
+}
+
+updateScrollbar();
+
+prevBtn.addEventListener("click", prevCardSlide);
+nextBtn.addEventListener("click", nextCardSlide);

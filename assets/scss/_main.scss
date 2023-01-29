@@ -322,14 +322,48 @@ main{
     #card-slider{
       width: 100%;
       overflow: hidden;
+      margin: 30px 0px;
+      position: relative;
       .card-slider-inner{
         display: flex;
         width: 100%;
         transition: transform 0.5s ease;
         .card-slider-item{
-          flex: 0 0 33%;
-          width: 33%;
-          background: rgb(255, 218, 218);
+          flex: 0 0 30%;
+          width: 30%;
+          margin-right: 1%;
+        }
+      }
+      .navBtn{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button{
+          background: none;
+          border: none;
+          padding: 0px 10px 0px 0px;
+          margin-right: 5px;
+          cursor: pointer;
+          i{
+            font-size: 24px;
+            color: #C2A5F9;
+          }
+        }
+        #scrollbar {
+          height: 3px;
+          background-color: #353D45;
+          border-radius: 10px;
+          position: relative;
+          &::before{
+            position: absolute;
+            content: '';
+            width: 3333px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: #353D45;
+          }
         }
       }
     }
