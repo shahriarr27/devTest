@@ -6,7 +6,6 @@ var nextSlideBtn = document.getElementById("next-slide");
 let currentSlide = 0;
 
 var totalSlides = slides.length;
-console.log(totalSlides, currentSlide);
 
 function showSlide(index) {
   for (var i = 0; i < totalSlides; i++) {
@@ -24,7 +23,6 @@ function showSlide(index) {
 function nextSlide() {
   currentSlide = (currentSlide + 1) % totalSlides;
   showSlide(currentSlide);
-  console.log(currentSlide);
 }
 
 function disablePrevBtn() {
@@ -95,7 +93,6 @@ function nextCardSlide() {
         currentSlide2 = 0;
         showCardSlide(currentSlide2);
     }
-    console.log(currentSlide2);
 }
 
 function updateScrollbar() {
@@ -106,3 +103,19 @@ updateScrollbar();
 
 prevBtn.addEventListener("click", prevCardSlide);
 nextBtn.addEventListener("click", nextCardSlide);
+
+
+//navbar toggle
+
+let navToggle = document.getElementById("navToggle");
+let navbarNav = document.getElementById("navbarNav");
+let navbarHeight = navbarNav.scrollHeight;
+
+navbarNav.style.height = '0px';
+navToggle.addEventListener("click",function() {
+  if (navbarNav.style.height === "0px") {
+    navbarNav.style.height = navbarHeight + "px";
+  } else {
+    navbarNav.style.height = "0px";
+  }
+})

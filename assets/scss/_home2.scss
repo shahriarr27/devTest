@@ -1,0 +1,50 @@
+#home2{
+  background: $secondary_color;
+  position: relative;
+  .navbar-toggler-btn{
+    position: absolute;
+    right: 3%;
+    top: 35px;
+    #navToggle{
+      background: none;
+      border: none;
+      cursor: pointer;
+      i{
+        font-size: 28px;
+        color: white;
+      }
+    }
+  }
+  #navbarNav{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: $primary_color;
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.5s ease-in-out;
+    .navbar-inner{
+      padding: 50px;
+    }
+    .navbar-nav{
+      display: block;
+      .nav-item{
+        margin-bottom: 20px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        .nav-link{
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 21px;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
