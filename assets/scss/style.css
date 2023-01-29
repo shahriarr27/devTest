@@ -376,6 +376,10 @@ main #hero .sliderBtns button i {
   color: #616161;
 }
 
+main #hero .sliderBtns button:disabled i {
+  color: #B4B4B4;
+}
+
 main #services {
   margin: 60px 0px;
 }

@@ -1,9 +1,12 @@
 // start of hero slider
 var slides = document.querySelectorAll("#heroSlider .slider-item");
 let sliderNav = document.querySelectorAll(".slider-nav");
-let currentSlide2 = 0;
+var prevSlideBtn = document.getElementById("prev-slide");
+var nextSlideBtn = document.getElementById("next-slide");
+let currentSlide = 0;
 
 var totalSlides = slides.length;
+console.log(totalSlides, currentSlide);
 
 function showSlide(index) {
   for (var i = 0; i < totalSlides; i++) {
@@ -12,39 +15,61 @@ function showSlide(index) {
   }
   slides[index].classList.add('show');
   sliderNav[index].classList.add('active');
+
+  disableNextBtn();
+  disablePrevBtn();
 }
+
 
 function nextSlide() {
-  currentSlide2 = (currentSlide2 + 1) % totalSlides;
-  showSlide(currentSlide2);
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+  console.log(currentSlide);
 }
 
-function autoSlider() {
-  setInterval(nextSlide, 5000);
+function disablePrevBtn() {
+  if(currentSlide == 0){
+    prevSlideBtn.disabled = true;
+  }else {
+    prevSlideBtn.disabled = false;
+  }
 }
+function disableNextBtn() {
+  if(currentSlide == totalSlides - 1){
+    nextSlideBtn.disabled = true;
+  }else {
+    nextSlideBtn.disabled = false;
+  }
+}
+disablePrevBtn();
 
-autoSlider();
+//uncomment this if needs auto slide
+// function autoSlider() {
+//   setInterval(nextSlide, 5000);
+// }
+
+// autoSlider();
 
 //button controls
-document.getElementById("prev-slide").addEventListener("click", function () {
-  currentSlide2 = (currentSlide2 + totalSlides - 1) % totalSlides;
-  showSlide(currentSlide2);
+prevSlideBtn.addEventListener("click", function () {
+  currentSlide = (currentSlide + totalSlides - 1) % totalSlides;
+  showSlide(currentSlide);
 });
 
-document.getElementById("next-slide").addEventListener("click", nextSlide);
+nextSlideBtn.addEventListener("click", nextSlide);
 
 //nav controls
 sliderNav.forEach(function (singleNav, key) {
   singleNav.addEventListener("click", function () {
-    currentSlide2 = key;
-    showSlide(currentSlide2);
+    currentSlide = key;
+    showSlide(currentSlide);
   });
 })
 
 // end hero slider
 
 //transaction slider
-var currentSlide = 0;
+var currentSlide2 = 0;
 var slider = document.getElementById("slider");
 var prevBtn = document.getElementById("btn__prev");
 var nextBtn = document.getElementById("btn__next");
@@ -52,29 +77,29 @@ let scrollbar = document.getElementById("scrollbar");
 let slidesLength = slider.children.length;
 
 function prevCardSlide() {
-  if (currentSlide > 0) {
-    showCardSlide(currentSlide - 1);
+  if (currentSlide2 > 0) {
+    showCardSlide(currentSlide2 - 1);
   }
 }
 
 function showCardSlide(index) {
-    currentSlide = index;
-    slider.style.transform = "translateX(-" + (currentSlide * 31) + "%)";
+    currentSlide2 = index;
+    slider.style.transform = "translateX(-" + (currentSlide2 * 31) + "%)";
     updateScrollbar();
 }
 
 function nextCardSlide() {
-    if (currentSlide < slider.children.length - 3) {
-      showCardSlide(currentSlide + 1);
+    if (currentSlide2 < slider.children.length - 3) {
+      showCardSlide(currentSlide2 + 1);
     } else {
-        currentSlide = 0;
-        showCardSlide(currentSlide);
+        currentSlide2 = 0;
+        showCardSlide(currentSlide2);
     }
-    console.log(currentSlide);
+    console.log(currentSlide2);
 }
 
 function updateScrollbar() {
-  scrollbar.style.width = (currentSlide + 1) / slidesLength * 100 + "%";
+  scrollbar.style.width = (currentSlide2 + 1) / slidesLength * 100 + "%";
 }
 
 updateScrollbar();
