@@ -1,0 +1,185 @@
+@media screen and (max-width:768px) {
+  header {
+    nav {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  main {
+
+    #hero {
+      padding-top: 180px;
+
+      .hero-slider-wrapper {
+        margin-left: 0%;
+        margin-right: 0%;
+        position: relative;
+
+        .slider-item {
+          h2 {
+            width: 100%;
+          }
+
+          p {
+            width: 100%;
+          }
+        }
+      }
+
+      #sliderControl {
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+
+      .sliderBtns {
+        right: 7%;
+        top: 27%;
+      }
+    }
+    #services{
+      .card-deck{
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+    #cta{
+      .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        .col-lg-6{
+          width: 100%;
+          padding: 0px 0px;
+          &:first-of-type{
+            order: 1;
+          }
+        }
+        .cta-left-side{
+          padding: 5%;
+        }
+        .cta-right-side{
+          img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: left center;
+          }
+        }
+      }
+    }
+  }
+  
+footer{
+  .footer-top{
+    background: $secondary_color;
+    padding: 50px 0px;
+    .footer-menu{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}
+
+#home2{
+  #navbarNav{
+    .navbar-inner{
+      .row{
+        display: block;
+        .col-md-4{
+          width: 100%;
+          border-right: none;
+        }
+      }
+      .navbar-nav{
+        padding: 0px 50px;
+        margin: 40px 0px;
+        .nav-item{
+          .dropdown-menu{
+            display: none;
+            position: absolute;
+            left: auto;
+            right: 0%;
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width:425px) {
+  header {
+    nav {
+      ul{
+        display: none;
+      }
+    }
+  }
+
+  main {
+
+    #hero {
+      padding-top: 80px;
+      #sliderControl {
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+      .sliderBtns {
+        display: none;
+      }
+    }
+    #services{
+      .card-deck{
+        display: block;
+        .card{
+          padding: 50px 40px;
+        }
+      }
+    }
+    #transaction{
+      margin: 60px 0px;
+      .transaction-title{
+        display: block;
+        h4{
+          margin-bottom: 20px;
+        }
+      }
+      #card-slider{
+        .card-slider-inner{
+          .card-slider-item{
+            flex: 0 0 48%;
+            width: 48%;
+            margin-right: 1%;
+          }
+        }
+      }
+    }
+  }
+  
+footer{
+  .footer-top{
+    background: $secondary_color;
+    padding: 50px 0px;
+    .footer-menu{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  .footer-bottom{
+    .copyright-social-links{
+      flex-wrap: wrap;
+      gap: 20px;
+      .copyright{
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+}

@@ -1,6 +1,9 @@
 #home2{
   background: $secondary_color;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   .navbar-toggler-btn{
     position: absolute;
     right: 3%;
@@ -22,27 +25,79 @@
     background: $primary_color;
     overflow: hidden;
     height: 0px;
-    transition: height 0.5s ease-in-out;
-    .navbar-inner{
-      padding: 50px;
+    transition: 0.5s ease-in-out;
+    &.showing{
+      overflow: visible;
     }
-    .navbar-nav{
-      display: block;
-      .nav-item{
-        margin-bottom: 20px;
-        &:last-of-type{
-          margin-bottom: 0;
+    .navbar-inner{
+      .row{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: flex-start;
+        .col-md-4{
+          width: 33.33%;
+          border-right: 1px solid $secondary_color;
         }
-        .nav-link{
-          font-family: 'DM Sans';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 21px;
-          display: flex;
-          align-items: center;
-          text-transform: capitalize;
-          color: #FFFFFF;
+      }
+      .navbar-nav{
+        display: block;
+        padding: 50px;
+        .nav-item{
+          margin-bottom: 20px;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          .nav-link{
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i{
+              padding-right: 30px;
+            }
+            &:hover{
+              i{
+                padding-right: 00px;
+              }
+            }
+          }
+          position: relative;
+          .dropdown-menu{
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+            background: $secondary_color;
+            width: 200px;
+            padding: 20px;
+            z-index: 10;
+            li{
+              margin-bottom: 10px;
+              &:last-of-type{
+                margin-bottom: 0;
+              }
+            }
+            .dropdown-item{
+              font-family: 'DM Sans';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 21px;
+              display: flex;
+              align-items: center;
+              text-transform: capitalize;
+              color: #FFFFFF;
+            }
+          }
         }
       }
     }

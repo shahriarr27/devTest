@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYLARK | Dev Test</title>
-  
+
   <!-- Bootstrap Icons -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css'/>
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css' />
   <!-- stylesheet -->
   <link rel="stylesheet" href="assets/scss/style.css">
   <!-- icon -->
   <link rel="shortcut icon" href="assets/images/fav-globe.png" type="image/x-icon">
 </head>
+
 <body>
   <header>
     <nav id="home2">
@@ -31,10 +34,95 @@
           <div class="row">
             <div class="col-md-4">
               <ul class="navbar-nav">
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Who we are</a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">What we do </a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">sectors</a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Transactions</a></li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">Who we are <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">What we do <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">sectors <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">Transactions <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">Our people <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">global reach <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link">newsletter</a>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link">contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">careers <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link dropdown">working with us <i class="bi bi-arrow-right"></i></a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link">privacy</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -48,26 +136,38 @@
         <div class="hero-slider-wrapper" id="heroSlider">
           <div class="slider-item show">
             <h5>About us</h5>
-            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas. Malesuada.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
+            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas.
+              Malesuada.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas
+              vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer
+              eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
             <a href="javascript:void(0)"><i class="bi bi-arrow-right"></i>Learn More</a>
           </div>
           <div class="slider-item">
             <h5>Our Team</h5>
-            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas. Malesuada.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
+            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas.
+              Malesuada.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas
+              vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer
+              eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
             <a href="javascript:void(0)"><i class="bi bi-arrow-right"></i>Learn More</a>
           </div>
           <div class="slider-item">
             <h5>Where we are</h5>
-            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas. Malesuada.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
+            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas.
+              Malesuada.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas
+              vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer
+              eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
             <a href="javascript:void(0)"><i class="bi bi-arrow-right"></i>Learn More</a>
           </div>
           <div class="slider-item">
             <h5>Contact us</h5>
-            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas. Malesuada.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
+            <h2>Skylark is a dolor sit amet consectetur. Sem at pellentesque in tellus. Eu nibh dolor erat egestas.
+              Malesuada.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. In enim aliquam porttitor. Condimentum amet consectetur egestas
+              vel libero varius. Feugiat magna dolor odio penatibus consequat est auctor. Ligula purus faucibus integer
+              eget risus. Fermentum aenean gravida netus et quis quis. Elit mattis quisque sed.</p>
             <a href="javascript:void(0)"><i class="bi bi-arrow-right"></i>Learn More</a>
           </div>
         </div>
@@ -185,61 +285,65 @@
       </div>
     </section>
     <section id="cta">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="cta-left-side">
-              <h3>Neque tortor porttitor ornare ultrices. Risus eget vel maecenas </h3>
-              <hr class="custom-hr">
-              <p>Lorem ipsum dolor sit amet consectetur. Sollicitudin ac egestas rutrum eget urna. Risus eget congue duis diam. Etiam nisl quisque ut sed ac. Neque tortor porttitor ornare ultrices. Risus eget vel maecenas aliquam. Amet euismod purus turpis velit. Eget sem integer urna odio.</p>
-              <div class="cta-buttons">
-                <a href="#">Join the team</a>
-                <a href="#">Meet the team</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="cta-right-side">
-              <img src="assets/images/devtest1.png" alt="cta">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="cta-left-side">
+            <h3>Neque tortor porttitor ornare ultrices. Risus eget vel maecenas </h3>
+            <hr class="custom-hr">
+            <p>Lorem ipsum dolor sit amet consectetur. Sollicitudin ac egestas rutrum eget urna. Risus eget congue duis
+              diam. Etiam nisl quisque ut sed ac. Neque tortor porttitor ornare ultrices. Risus eget vel maecenas
+              aliquam. Amet euismod purus turpis velit. Eget sem integer urna odio.</p>
+            <div class="cta-buttons">
+              <a href="#">Join the team</a>
+              <a href="#">Meet the team</a>
             </div>
           </div>
         </div>
+        <div class="col-lg-6">
+          <div class="cta-right-side">
+            <img src="assets/images/devtest1.png" alt="cta">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
-      <div class="footer-top">
-        <div class="container">
-          <ul class="footer-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">HOw can we help</a></li>
-            <li><a href="#">Sector Expertise</a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">News & Insights</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact US</a></li>
-            <li class="subscribe"><a href="#">Subscribe to our news</a></li>
+    <div class="footer-top">
+      <div class="container">
+        <ul class="footer-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">HOw can we help</a></li>
+          <li><a href="#">Sector Expertise</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">News & Insights</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact US</a></li>
+          <li class="subscribe"><a href="#">Subscribe to our news</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <ul class="copyright-social-links">
+          <ul class="copyright">
+            <li>&copy; Capitalmind 2022</li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">A Website by Skylark Creative</a></li>
           </ul>
-        </div>
+          <ul class="social-links">
+            <li><a href="#"><i class="bi bi-linkedin"></i>Follow Us on Linkedin</a></li>
+          </ul>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <ul class="copyright-social-links">
-            <ul class="copyright">
-              <li>&copy; Capitalmind 2022</li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">A Website by Skylark Creative</a></li>
-            </ul>
-            <ul class="social-links">
-              <li><a href="#"><i class="bi bi-linkedin"></i>Follow Us on Linkedin</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    </div>
+    </div>
   </footer>
 
   <!-- scripts -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/dropdownNav.js"></script>
 </body>
+
 </html>

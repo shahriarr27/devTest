@@ -84,10 +84,13 @@ function showCardSlide(index) {
     currentSlide2 = index;
     slider.style.transform = "translateX(-" + (currentSlide2 * 31) + "%)";
     updateScrollbar();
+    if(slider.offsetWidth < 500){
+      slider.style.transform = "translateX(-" + (currentSlide2 * 49) + "%)";
+    }
 }
 
 function nextCardSlide() {
-    if (currentSlide2 < slider.children.length - 3) {
+    if (currentSlide2 < slider.children.length - 1) {
       showCardSlide(currentSlide2 + 1);
     } else {
         currentSlide2 = 0;
@@ -104,18 +107,3 @@ updateScrollbar();
 prevBtn.addEventListener("click", prevCardSlide);
 nextBtn.addEventListener("click", nextCardSlide);
 
-
-//navbar toggle
-
-let navToggle = document.getElementById("navToggle");
-let navbarNav = document.getElementById("navbarNav");
-let navbarHeight = navbarNav.scrollHeight;
-
-navbarNav.style.height = '0px';
-navToggle.addEventListener("click",function() {
-  if (navbarNav.style.height === "0px") {
-    navbarNav.style.height = navbarHeight + "px";
-  } else {
-    navbarNav.style.height = "0px";
-  }
-})
